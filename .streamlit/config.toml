@@ -1,0 +1,25 @@
+[theme]
+base="dark"
+primaryColor="#CDB30C"  
+backgroundColor="#FBF5DD"
+secondaryBackgroundColor="#656d4a"
+textColor="#000000"
+borderColor="#656d4a"
+showWidgetBorder=false
+baseRadius="full"
+font = "serif"
+headingFont = "serif"
+codeFont = "monospace"
+headingFontSizes = "28px,24px,20px,16px,14px,12px"
+
+[theme.sidebar]
+font = "serif"
+headingFont = "serif"
+codeFont = "monospace"
+backgroundColor="#333d29"
+textColor="#FFFFFF"
+secondaryBackgroundColor="#1a1d24"
+
+# primaryColor="#CDB30C"  
+# backgroundColor="#FBF5DD"
+# secondaryBackgroundColor="#778873"
