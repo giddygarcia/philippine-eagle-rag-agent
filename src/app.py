@@ -29,7 +29,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 st.set_page_config(
-    page_title="Philippine Eagle Research Chatbot",
+    page_title="Philippine Eagle Conservation Research Agent",
     page_icon="🦅",
     layout="centered",
 )
@@ -140,10 +140,7 @@ PROMPT_PATH = os.path.join(os.path.dirname(__file__), "system_prompt.txt")
 def get_agent(model: str, base_url: str, api_key: str):
     """Create and cache the LangChain agent."""
     llm = ChatOpenAI(
-        model=model,
-        base_url=base_url,
-        api_key=api_key,
-        temperature=0,
+        model=model, base_url=base_url, api_key=api_key, temperature=0, max_tokens=2048
     )
 
     tools = make_rag_tools(llm, retriever)
@@ -170,7 +167,7 @@ chat_box = st.container(height=550, border=True)
 with chat_box:
     for msg in st.session_state.messages:
         with st.chat_message(
-            msg["role"], avatar="🦅" if msg["role"] == "assistant" else "🤔"
+            msg["role"], avatar="🦅" if msg["role"] == "assistant" else "💬"
         ):
             st.markdown(msg["content"])
             if msg.get("citations"):
@@ -207,7 +204,7 @@ if user_input:
             st.warning(rate_msg)
         else:
             with chat_box:
-                with st.chat_message("user", avatar="🤔"):
+                with st.chat_message("user", avatar="💬"):
                     st.markdown(user_input)
 
                 with st.chat_message("assistant", avatar="🦅"):

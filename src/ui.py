@@ -2,7 +2,7 @@ import streamlit as st
 
 
 def render_header():
-    st.title("🦅 Philippine Eagle Research Chatbot")
+    st.title("🦅 Philippine Eagle Research Agent")
     st.markdown(
         """
         The **great Philippine Eagle** is one of the largest and rarest forest raptors in the world. It is the national bird of the Philippines and is endemic to the forests of the country, currently facing declining populations as a **critically endangered** species — learn more, chat about these species and how to help today:
